@@ -25,7 +25,8 @@ class ChatBot:
             ("identity", ["who are you", "what is your name", "your name"]),
             ("help", ["help", "commands", "options", "what can you do"]),
             ("farewell", ["bye", "goodbye", "exit", "quit"]),
-            ("greeting", ["hello", "hi", "yo", "hey"])
+            ("greeting", ["hello", "hi", "yo", "hey"]),
+            ("query", ["what", "why", "when", "who", "where", "how"])
         ]
 
         # Connect each topic to a function or a list of replies
@@ -38,6 +39,7 @@ class ChatBot:
             "farewell": ["See you later!", "Goodbye!", "Adios!"],
             "greeting": ["Hello! What would you like to do today?"],
             "gratitude": ["No problem!", "Happy to help!"]
+            "query": self.web_search
         }
 
     def get_city(self):
